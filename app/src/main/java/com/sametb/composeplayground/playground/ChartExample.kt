@@ -96,37 +96,37 @@ fun LineChart() {
 }
 
 
-//@Preview
-//@Composable
-//fun BarChart() {
-//
-////    val barChartData = DataUtils.getBarChartData(barChartListSize, maxRange)
-//    val yStepSize = 5
-//
-//
-//    val barChartData = BarChartData(
-//        chartData = barChartData,
-//        xAxisData = xAxisData,
-//        yAxisData = yAxisData,
-//        paddingBetweenBars = 20.dp,
-//        barWidth = 25.dp
-//    )
-//
-//    val xAxisData = AxisData.Builder()
-//        .axisStepSize(30.dp)
-//        .steps(barChartData.size - 1)
-//        .bottomPadding(40.dp)
-//        .axisLabelAngle(20f)
-//        .labelData { index -> barData[index].label }
-//        .build()
-//
-//    val yAxisData = AxisData.Builder()
-//        .steps(yStepSize)
-//        .labelAndAxisLinePadding(20.dp)
-//        .axisOffset(20.dp)
-//        .labelData { index -> (index * (maxRange / yStepSize)).toString() }
-//        .build()
-//
-//    BarChart(modifier = Modifier.height(350.dp), barChartData = barChartData)
-//}
+@Preview
+@Composable
+fun BarChart() {
+
+//    val barChartData = DataUtils.getBarChartData(barChartListSize, maxRange)
+    val yStepSize = 5
+
+
+    val barChartData = BarChartData(
+        chartData = barChartData,
+        xAxisData = xAxisData,
+        yAxisData = yAxisData,
+        paddingBetweenBars = 20.dp,
+        barWidth = 25.dp
+    )
+
+    val xAxisData = AxisData.Builder()
+        .axisStepSize(30.dp)
+        .steps(barChartData.size - 1)
+        .bottomPadding(40.dp)
+        .axisLabelAngle(20f)
+        .labelData { index -> barData[index].label }
+        .build()
+
+    val yAxisData = AxisData.Builder()
+        .steps(yStepSize)
+        .labelAndAxisLinePadding(20.dp)
+        .axisOffset(20.dp)
+        .labelData { index -> (index * (maxRange / yStepSize)).toString() }
+        .build()
+
+    BarChart(modifier = Modifier.height(350.dp), barChartData = barChartData)
+}
 
